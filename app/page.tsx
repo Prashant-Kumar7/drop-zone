@@ -8,6 +8,8 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Appbar/>
+      {/* <BackgroundBeams/> */}
+
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-6">Share Your Files Securely</h1>
@@ -60,7 +62,6 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
-      <BackgroundBeams/>
     </div>
   )
 }

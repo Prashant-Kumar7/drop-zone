@@ -36,6 +36,7 @@ import {
 import { Copy, MoreVertical, Trash2, LogOut, Upload, Folder, Settings, HelpCircle, Menu } from "lucide-react"
 import { useRecoilState } from "recoil";
 import { sideBarOpenAtom } from "@/state";
+import { signOut } from "next-auth/react";
 
 const initialFiles = [
   { id: 1, name: "document.pdf", url: "https://example.com/document.pdf" , createdDate : "10/11/2000" },
@@ -83,7 +84,7 @@ export default function Layout({
             FileShare
           </Link>
         </div>
-        <Button variant="ghost" className="text-gray-100">
+        <Button onClick={()=>{ signOut({callbackUrl : "/" , redirect : true}) }} variant="ghost" className="text-gray-100">
           <LogOut className="mr-2 h-4 w-4" /> Logout
         </Button>
       </nav>

@@ -35,7 +35,7 @@ export const Signin = () => {
     });
 
     if (!res?.error) {
-      route.push("/home");
+      route.push("/my-files");
     } else {
       setErr(true);
     }

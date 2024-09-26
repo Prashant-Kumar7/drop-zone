@@ -21,3 +21,10 @@ export const POST = async (req: NextRequest) => {
     });
   }
 };
+
+
+export const GET = async (req : NextRequest)=>{
+  return NextResponse.json({
+    msg : "hi from api"
+  })
+}
